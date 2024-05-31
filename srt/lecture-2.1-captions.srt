@@ -1,0 +1,924 @@
+1
+00:00:01,320 --> 00:00:06,120
+Hello, welcome this is short training 2.1.
+
+2
+00:00:06,120 --> 00:00:09,660
+Let's introduce the ARCADE Framework
+
+3
+00:00:11,000 --> 00:00:18,720
+The main purpose of the Arcade Framework is the integrated management of safety assurance information
+
+4
+00:00:18,720 --> 00:00:23,580
+together with with regular project development information
+
+5
+00:00:24,720 --> 00:00:28,680
+The figure illustrates the Framework application context,
+
+6
+00:00:28,680 --> 00:00:34,860
+where project teams and safety analysis teams use the same
+
+7
+00:00:34,860 --> 00:00:40,380
+project management tools to store and retrieve information on the development lifecycle of a system
+
+8
+00:00:41,880 --> 00:00:44,280
+safety analysis teams, in particular,
+
+9
+00:00:44,280 --> 00:00:50,280
+need to produce artifacts for certification, such as safety assurance cases
+
+10
+00:00:50,280 --> 00:00:55,680
+it is a task that can be complex in case project data does not conform
+
+11
+00:00:55,680 --> 00:01:00,600
+to a defined underlying information metamodel; and also when data related to safety assurance
+
+12
+00:01:00,600 --> 00:01:04,500
+is disconnected from regular project data
+
+13
+00:01:05,940 --> 00:01:12,120
+the ARCADE Framework provides support for the development process and preparation
+
+14
+00:01:12,120 --> 00:01:15,540
+for certification through a series of features
+
+15
+00:01:15,540 --> 00:01:21,060
+the ARCADE promotes integrated management of safety assurance data
+
+16
+00:01:21,060 --> 00:01:25,560
+using common project management tools
+
+17
+00:01:25,560 --> 00:01:32,760
+such as issue tracking systems or ALMs (Application Lifecycle Management)
+
+18
+00:01:32,760 --> 00:01:38,640
+ARCADE supports the automated extraction of project data to perform a variety
+
+19
+00:01:38,640 --> 00:01:43,340
+of analyzes , so that we could integrate it more easily into the a development pipeline
+
+20
+00:01:43,340 --> 00:01:48,180
+ARCADE also performs data consistency analysis according
+
+21
+00:01:48,180 --> 00:01:54,720
+to the Safety Assurance Information Model (SAIM) along with
+
+22
+00:01:54,720 --> 00:01:59,160
+other rules that are implemented in the internal ontology
+
+23
+00:02:01,020 --> 00:02:06,000
+ARCADE framework supports knowledge discovery by generating 
+
+24
+00:02:06,000 --> 00:02:11,760
+reports to classify and cross-reference explicit and implicit information extracted from the tools
+
+25
+00:02:14,160 --> 00:02:17,580
+We call "implicit" information those which are inferred from
+
+26
+00:02:17,580 --> 00:02:22,440
+the explicit information extracted from project management tool.
+
+27
+00:02:22,440 --> 00:02:27,360
+this contributes to a better knowledge discovery within the project's repository
+
+28
+00:02:27,360 --> 00:02:31,980
+Finally, ARCADE automatically generates fragments of
+
+29
+00:02:31,980 --> 00:02:35,940
+safety assurance cases based on a couple of argumentation patterns
+
+30
+00:02:38,400 --> 00:02:43,860
+the aim is to provide safety teams with multiple perspectives over the same data
+
+31
+00:02:43,860 --> 00:02:47,760
+without the need to manually built
+
+32
+00:02:47,760 --> 00:02:51,000
+different safety assurance cases in a visual modeling tool
+
+33
+00:02:51,000 --> 00:02:55,020
+the scenarios of use that ARCADE helps to automate are:
+
+34
+00:02:55,020 --> 00:02:57,600
+reviewing project and assurance information,
+
+35
+00:02:59,400 --> 00:03:04,200
+exploring this information with a focus on knowledge discovery,
+
+36
+00:03:04,200 --> 00:03:10,140
+and producing safety assurance case reports for a project by
+
+37
+00:03:10,140 --> 00:03:13,200
+reusing the automatically generated fragments
+
+38
+00:03:15,120 --> 00:03:17,640
+the framework workflow starts with the extraction of
+
+39
+00:03:17,640 --> 00:03:20,700
+information from the project management tool
+
+40
+00:03:20,700 --> 00:03:27,300
+In this version of the framework, we connect ARCADE with a issue tracking system (Jira) that contains
+
+41
+00:03:27,300 --> 00:03:30,600
+issues, fields within those issues, and links between issues
+
+42
+00:03:30,600 --> 00:03:35,100
+this issue data is extracted by ARCADE and fed into
+
+43
+00:03:35,100 --> 00:03:39,060
+an internal model based on the schema of the SAIM model
+
+44
+00:03:40,560 --> 00:03:46,380
+this internal model is loaded into the internal ontology of ARCADE, which performs the following actions:
+
+45
+00:03:46,380 --> 00:03:49,080
+verification of data consistency
+
+46
+00:03:49,080 --> 00:03:55,800
+if inconsistencies are found, explanations are computed to highlight the
+
+47
+00:03:55,800 --> 00:03:58,860
+item of project data that have deviations, also highlighting which rules were violated
+
+48
+00:03:58,860 --> 00:04:03,780
+if the data is consistent, implicit classifications will be inferred,
+
+49
+00:04:03,780 --> 00:04:07,320
+and the inferred data is fed back
+
+50
+00:04:07,320 --> 00:04:12,660
+into the ontology, thus leaving the internal model with a mix of provided and inferred data
+
+51
+00:04:14,280 --> 00:04:19,200
+on top of this combined data, queries are performed to retrieve
+
+52
+00:04:19,200 --> 00:04:24,240
+information according to a set of competence questions implemented in the framework
+
+53
+00:04:24,240 --> 00:04:28,980
+later on this video, some of these questions implemented in ARCADE will be shown
+
+54
+00:04:28,980 --> 00:04:35,040
+"competence question" is a term from the ontology domain and represents 
+
+55
+00:04:35,040 --> 00:04:39,060
+a relevant question that a knowledge-based system needs to respond to users
+
+56
+00:04:40,500 --> 00:04:44,940
+in ARCADE, the competence questions were devise to support the work
+
+57
+00:04:44,940 --> 00:04:48,540
+of the development and safety teams,
+
+58
+00:04:48,540 --> 00:04:51,660
+focusing on extracting information about the project's traceability
+
+59
+00:04:53,220 --> 00:04:56,340
+finally, also on top of the same combined data, it is carried out
+
+60
+00:04:56,340 --> 00:05:00,600
+some queries and the construction of arguments in GSN notation
+
+61
+00:05:00,600 --> 00:05:05,940
+we use the term "fragment" to denote that the arguments generated are not complete 
+
+62
+00:05:05,940 --> 00:05:11,520
+assurance cases reports, but rather a partial view that follows a pattern of argumentation from the literature
+
+63
+00:05:13,380 --> 00:05:17,340
+we will present ARCADE, the version that presented in this video is an
+
+64
+00:05:17,340 --> 00:05:19,860
+instance of the framework deployed at a web address,
+
+65
+00:05:20,940 --> 00:05:26,280
+which connects with a project management tool that we chose for initial integration
+
+66
+00:05:26,280 --> 00:05:29,760
+this Atlassian Jira was customized
+
+67
+00:05:29,760 --> 00:05:33,540
+to adopt the SAIM model, it is the same show in training 1.2
+
+68
+00:05:35,760 --> 00:05:42,420
+This is the main screen of the ARCADE tool, there are some pages with more detailed information
+
+69
+00:05:42,420 --> 00:05:49,680
+about how the framework operates, how to adapt it for use, and a breakdown
+
+70
+00:05:49,680 --> 00:05:54,060
+of the features and design decisions related to its development
+
+71
+00:05:54,060 --> 00:05:56,100
+let's use the ARCADE tool
+
+72
+00:06:01,260 --> 00:06:05,160
+of the tool starts with loading the ontology specification,
+
+73
+00:06:05,160 --> 00:06:08,580
+which contains the rules and axioms verified by ARCADE
+
+74
+00:06:08,580 --> 00:06:12,600
+the tool already leaves this specification preloaded,
+
+75
+00:06:12,600 --> 00:06:18,120
+the specification can be seen in these links at the beginning of the home page
+
+76
+00:06:18,120 --> 00:06:25,680
+if you want to reset the ontology, just click on "Reset" and the ontology is reloaded in the system
+
+77
+00:06:27,660 --> 00:06:35,100
+the project data extraction is available for three projects hosted in the Jira instance
+
+78
+00:06:35,100 --> 00:06:40,200
+the Open PCA project has already been explored in the first part of this evaluation,
+
+79
+00:06:40,200 --> 00:06:43,800
+and in this second part we are going to explore the DRONE project
+
+80
+00:06:44,760 --> 00:06:50,520
+when requesting to load a project, ARCADE connects to the issue tracking system through
+
+81
+00:06:50,520 --> 00:06:56,160
+the external access API, and retrieves the project data in the proprietary format defined by Jira
+
+82
+00:06:57,060 --> 00:07:00,240
+this data is transformed to the internal SAIM model
+
+83
+00:07:00,240 --> 00:07:02,340
+and then fed into the internal ontology
+
+84
+00:07:03,660 --> 00:07:08,760
+Let's load Open PCA Project data directly from Jira,
+
+85
+00:07:08,760 --> 00:07:13,740
+the process may take a few seconds, because after transferring data between servers
+
+86
+00:07:13,740 --> 00:07:19,380
+and transforming the data, ARCADE triggers the routines for consistency analysis,
+
+87
+00:07:19,380 --> 00:07:22,200
+classification of information and generation of safety assurance cases
+
+88
+00:07:23,340 --> 00:07:28,200
+if the data loading went without problems, a success message is shown
+
+89
+00:07:32,220 --> 00:07:36,900
+some technical data is shown in the "details" section
+
+90
+00:07:41,460 --> 00:07:43,860
+the number of items that were recovered,
+
+91
+00:07:43,860 --> 00:07:48,240
+this number includes issues, components and custom fields,
+
+92
+00:07:48,240 --> 00:07:52,980
+anything that is an element of the SAIM model, for example, assumptions and justifications
+
+93
+00:07:52,980 --> 00:07:55,980
+number of relationships between items
+
+94
+00:07:55,980 --> 00:07:59,580
+quantity of attributes related to these items
+
+95
+00:07:59,580 --> 00:08:06,420
+regarding the inferred data, the details show new inferred classifications for
+
+96
+00:08:06,420 --> 00:08:08,340
+items and new inferred relationships
+
+97
+00:08:13,740 --> 00:08:19,380
+Let's show how ARCADE supports knowledge discovery using the Open PCA project
+
+98
+00:08:19,380 --> 00:08:22,200
+the project is hosted in Jira and was automatically loaded,
+
+99
+00:08:22,200 --> 00:08:26,040
+it contains 94 objects from the SAIM model
+
+100
+00:08:26,040 --> 00:08:30,480
+these objects comprise issues, components and custom fields
+
+101
+00:08:30,480 --> 00:08:32,640
+e.g. issue
+
+102
+00:08:43,200 --> 00:08:50,940
+OPENPCA-71 is registered in Jira as a "Story" and was then mapped as a "Requirement"
+
+103
+00:08:53,520 --> 00:08:57,840
+some fields were extracted to fill the attributes of SAIM model:
+
+104
+00:08:57,840 --> 00:09:03,000
+name, description, status, creation date,
+
+105
+00:09:03,000 --> 00:09:10,380
+update date and a URL in case you want to access the same issue in the original tool
+
+106
+00:09:13,860 --> 00:09:18,840
+some elements of the SAIM model, which were mapped as custom fields in Jira,
+
+107
+00:09:18,840 --> 00:09:24,420
+are imported as separate objects, such as assumptions and justifications
+
+108
+00:09:26,640 --> 00:09:31,560
+and, finally, relationships with other issues were also extracted
+
+109
+00:09:31,560 --> 00:09:36,960
+in the example show, the requirement is refined by three other requirements
+
+110
+00:09:39,240 --> 00:09:43,080
+This view differs from the view provided by the
+
+111
+00:09:43,080 --> 00:09:48,780
+Jira tool, as the semantics of the SAIM model was applied
+
+112
+00:09:48,780 --> 00:09:52,320
+Another example is "Component10026"
+
+113
+00:09:59,880 --> 00:10:04,560
+"Component10026" is an internal Jira identifier,
+
+114
+00:10:04,560 --> 00:10:09,640
+but the name visible to Jira users is "Control Panel"
+
+115
+00:10:10,620 --> 00:10:12,120
+we can see that
+
+116
+00:10:13,980 --> 00:10:18,780
+the component in Jira has been imported as an element of type "Component" of SAIM model
+
+117
+00:10:20,340 --> 00:10:27,360
+the associations between a component and the issues were
+
+118
+00:10:27,360 --> 00:10:31,380
+imported as "allocates" relationship (in the case of requirements)
+
+119
+00:10:32,340 --> 00:10:38,760
+now we see an example of inferred information, in this case these requirements are
+
+120
+00:10:38,760 --> 00:10:44,640
+refinements of other requirements, which are already explicitly linked to this component
+
+121
+00:10:45,660 --> 00:10:50,760
+by our model, there is an inference rule that the requirements that
+
+122
+00:10:50,760 --> 00:10:55,320
+are refinements are also allocated in the same component
+
+123
+00:10:57,420 --> 00:11:05,280
+this way, we have a richer view on the participation of any component in the system design
+
+124
+00:11:06,660 --> 00:11:08,460
+Let's show the competence questions
+
+125
+00:11:11,820 --> 00:11:14,220
+We have two groups of competence questions:
+
+126
+00:11:14,220 --> 00:11:20,160
+"Basic" questions and "traceability gaps" questions
+
+127
+00:11:22,440 --> 00:11:30,780
+that items listing that we saw above are the answer for the first two basic questions,
+
+128
+00:11:30,780 --> 00:11:36,480
+which are questions that seek to rescue which are the objects and their classifications,
+
+129
+00:11:36,480 --> 00:11:38,820
+and which are the relationships between the objects
+
+130
+00:11:39,780 --> 00:11:42,240
+all these items can be found in the view above
+
+131
+00:11:43,680 --> 00:11:45,420
+in the basic questions group,
+
+132
+00:11:45,420 --> 00:11:49,620
+the expectation is to found items that match the question
+
+133
+00:11:49,620 --> 00:11:55,140
+if no items are returned, it means there is not yet in the original repository any
+
+134
+00:11:55,140 --> 00:11:57,840
+project items with this classification, and this absence needs
+
+135
+00:11:57,840 --> 00:12:03,780
+to be analyzed by whoever is in charge of the project traceability review
+
+136
+00:12:05,760 --> 00:12:10,260
+the second group of competence questions is related to traceability gaps,
+
+137
+00:12:13,320 --> 00:12:18,900
+different from the basic group, the expectation is not to find items that match the question
+
+138
+00:12:18,900 --> 00:12:23,940
+It is up to the team to review whether the identified gaps are really a problem
+
+139
+00:12:26,760 --> 00:12:31,380
+as illustration, question CQ13 asks what are
+
+140
+00:12:31,380 --> 00:12:33,720
+the requirements that are not allocated to any component
+
+141
+00:12:34,860 --> 00:12:40,740
+in this case, we found requirements that are not allocated to any component,
+
+142
+00:12:40,740 --> 00:12:42,960
+not even an inferred allocation
+
+143
+00:12:42,960 --> 00:12:47,580
+So whether or not this is an issue for project traceability
+
+144
+00:12:47,580 --> 00:12:49,920
+is up to the team to decide
+
+145
+00:12:51,600 --> 00:12:56,580
+ARCADE's intention is not to replace safety assurance specialists
+
+146
+00:12:56,580 --> 00:13:01,560
+but to support their work by showing classified and filtered information
+
+147
+00:13:01,560 --> 00:13:05,280
+it is also important to emphasize that ARCADE is not
+
+148
+00:13:05,280 --> 00:13:08,040
+a modeling tool, nor does it store its own data
+
+149
+00:13:08,040 --> 00:13:14,100
+if any information is classified incorrectly or is missing, the team must correct
+
+150
+00:13:14,100 --> 00:13:19,260
+the data directly in the original repository, in our case the Jira issue system
+
+151
+00:13:19,260 --> 00:13:24,840
+in this way, who later consult the project repository, or use the ARCADE,
+
+152
+00:13:24,840 --> 00:13:27,060
+you will work with the correct, updated information
+
+153
+00:13:28,740 --> 00:13:35,700
+the design of ARCADE was planned to be easily extended with new
+
+154
+00:13:35,700 --> 00:13:39,480
+competence questions, according to specific needs of the projects
+
+155
+00:13:39,480 --> 00:13:45,180
+By using semantic web and description logic technologies,
+
+156
+00:13:45,180 --> 00:13:50,220
+the extension of the SAIM model and internal ontology is straightforward
+
+157
+00:13:53,760 --> 00:13:55,860
+Let's demonstrate the consistency analysis
+
+158
+00:13:55,860 --> 00:13:59,520
+when ARCADE finds no inconsistencies in the data loaded,
+
+159
+00:13:59,520 --> 00:14:03,240
+the ontology is indicated as consistent
+
+160
+00:14:03,240 --> 00:14:07,440
+Let's demonstrate how ARCADE handles a set of data that contains inconsistencies
+
+161
+00:14:07,440 --> 00:14:14,160
+we have an example project, also based on the domain of analgesic infusion pumps,
+
+162
+00:14:14,160 --> 00:14:19,020
+this data contains inconsistencies inside Jira and we are going to load it now
+
+163
+00:14:20,640 --> 00:14:24,780
+the video has been paused because the loading of data with inconsistencies can take
+
+164
+00:14:24,780 --> 00:14:27,900
+a while, due to the computation of the explanations
+
+165
+00:14:27,900 --> 00:14:35,280
+after loading the data, there is information about whether the consistency is true or false. if the
+
+166
+00:14:35,280 --> 00:14:40,920
+consistency is false, explanations are computed to show the user which
+
+167
+00:14:40,920 --> 00:14:43,020
+data items are in conflict with the SAIM model
+
+168
+00:14:43,020 --> 00:14:51,000
+let's see these explanations, the items are still listed
+
+169
+00:14:51,000 --> 00:14:54,780
+and below we have the verification for inconsistencies
+
+170
+00:14:57,600 --> 00:15:03,900
+There are explanations shown, with a separation to show which
+
+171
+00:15:03,900 --> 00:15:10,200
+items or links are involved, and which rules are impacted
+
+172
+00:15:10,200 --> 00:15:17,220
+let's explain the first explanation. We have the item "GPCA-7" which has a
+
+173
+00:15:17,220 --> 00:15:24,960
+classification as Hazard, and at the same time the item is marked as a mitigator of item "GPCA-9"
+
+174
+00:15:24,960 --> 00:15:30,540
+however, by our rules, if a given object mitigates another,
+
+175
+00:15:30,540 --> 00:15:35,100
+that object is a "safety requirement", and also by our rules we cannot
+
+176
+00:15:35,100 --> 00:15:40,440
+have the same object being marked as a "requirement" and as a "hazard", so in this
+
+177
+00:15:40,440 --> 00:15:46,620
+case we have an inconsistency. we have a hazard that is mitigating some other object.
+
+178
+00:15:50,580 --> 00:15:54,180
+another problem we also have in the data is related to
+
+179
+00:15:54,780 --> 00:16:00,780
+the item "GPCA-1" which is classified as a requirement, item "GPCA-15" is marked as
+
+180
+00:16:00,780 --> 00:16:07,380
+a refinement of "GPCA-1", but item "GPCA-15" is also classified as a "Design Definition"
+
+181
+00:16:08,340 --> 00:16:12,600
+in that case, we have a rule that if any object refines
+
+182
+00:16:12,600 --> 00:16:16,020
+or is refined by a requirement, that object is also a requirement.
+
+183
+00:16:16,740 --> 00:16:22,020
+similarly, there is a rule stating that items can not be 
+
+184
+00:16:22,020 --> 00:16:24,540
+at same time classified as a requirement and as a design definition
+
+185
+00:16:25,560 --> 00:16:31,200
+These are two examples of inconsistencies that can be found 
+
+186
+00:16:31,200 --> 00:16:38,460
+and highlighted by ARCADE to help the teams
+
+187
+00:16:39,840 --> 00:16:44,640
+As we pointed out earlier, ARCADE does not make any decision about what the correction should be:
+
+188
+00:16:44,640 --> 00:16:53,340
+this decision is up to the team, which will decide which of the items has the wrong classification.
+
+189
+00:16:55,200 --> 00:17:03,000
+Let's go to Jira, correct this information and reload the GPCA project in our system
+
+190
+00:17:07,320 --> 00:17:15,660
+so first let's go to issue "GPCA-15", which in reality should have been classified as an requirement,
+
+191
+00:17:17,280 --> 00:17:25,680
+that refines the requirement "GPCA-1". But it ended up being incorrectly marked as a "design definition"
+
+192
+00:17:25,680 --> 00:17:37,740
+let's change the issue type, and then redo the loading of data in ARCADE
+
+193
+00:17:37,740 --> 00:17:44,820
+another problem is related to the issue "GPCA-7", which is a hazard
+
+194
+00:17:44,820 --> 00:17:54,720
+and there is a link to mitigated to requirement "GPCA-9". It seems that there was am inversion of the relationship,
+
+195
+00:17:54,720 --> 00:17:59,880
+instead of being linked as "is mitigates by ", it was linked "mitigates"
+
+196
+00:17:59,880 --> 00:18:08,880
+let's remove the wrong relationship and redo it correctly
+
+197
+00:18:21,660 --> 00:18:28,380
+let's now run again the data reload and see if the problems are solved
+
+198
+00:18:36,120 --> 00:18:37,140
+let's see
+
+199
+00:18:37,140 --> 00:18:39,060
+the reload is finished
+
+200
+00:18:39,060 --> 00:18:41,160
+we can see that the consistency is true now,
+
+201
+00:18:42,300 --> 00:18:48,720
+there are no more inconsistencies in the GPCA project
+
+202
+00:18:48,720 --> 00:18:52,440
+let's see the items
+
+203
+00:18:54,060 --> 00:19:01,200
+"GPCA-1" has a refinement to "GPCA-15", and "GPCA-15" is being classified as a requirement
+
+204
+00:19:01,200 --> 00:19:05,040
+regarding the item "GPCA-7",
+
+205
+00:19:16,020 --> 00:19:20,820
+now it has the correct direction of the mitigation relationship
+
+206
+00:19:24,780 --> 00:19:29,160
+let's see the generation of fragments of safety assurance cases,
+
+207
+00:19:29,160 --> 00:19:33,900
+let's use the Open PCA project that is already loaded
+
+208
+00:19:39,180 --> 00:19:43,140
+so at the bottom of the home page, we have the arguments
+
+209
+00:19:43,140 --> 00:19:47,760
+there are two argumentation patterns implemented that we selected from the literature
+
+210
+00:19:47,760 --> 00:19:51,060
+one pattern is the Functional Decomposition Pattern, and the second is the Hazard Avoidance Pattern
+
+211
+00:19:51,060 --> 00:19:58,260
+in the functional decomposition pattern,
+
+212
+00:19:58,260 --> 00:20:02,280
+the skeleton of the argumentation is formed by the requirements and their refinements
+
+213
+00:20:03,360 --> 00:20:07,320
+in the hazard avoidance pattern, the argumentation is formed by the hazards,
+
+214
+00:20:07,320 --> 00:20:10,200
+their refinements and the requirements that mitigate them
+
+215
+00:20:12,300 --> 00:20:20,520
+In this version of ARCADE, fragments are generated in GSN notation and in svg format
+
+216
+00:20:26,460 --> 00:20:30,420
+we show here the central part of the argument
+
+217
+00:20:30,420 --> 00:20:35,520
+the GSN notation has a visual syntax and it is
+
+218
+00:20:35,520 --> 00:20:39,720
+the most used notation in academia and industry, according to several studies
+
+219
+00:20:39,720 --> 00:20:46,740
+It is straightforward to extend the framework to generate fragments in other patterns, formats or notations,
+
+220
+00:20:46,740 --> 00:20:51,000
+depending on the specific needs of a team or an organization
+
+221
+00:20:53,520 --> 00:20:57,420
+Let's show the other pattern, the hazard avoidance
+
+222
+00:21:04,560 --> 00:21:09,720
+Both patterns are perspectives that complement each other and can be built on top of the same data
+
+223
+00:21:09,720 --> 00:21:15,180
+the manual construction of both perspectives would be quite laborious,
+
+224
+00:21:15,180 --> 00:21:19,980
+the automated generation provides a preliminary view of the assurance cases effortlessly
+
+225
+00:21:21,420 --> 00:21:25,860
+We concluded the framework presentation.
+
+226
+00:21:25,860 --> 00:21:29,640
+ARCADE aims to support teams to manage safety assurance information
+
+227
+00:21:29,640 --> 00:21:32,760
+together with regular project information
+
+228
+00:21:32,760 --> 00:21:39,660
+This integrated management allows thorough analysis of data and automatic generation
+
+229
+00:21:39,660 --> 00:21:43,620
+of artifacts focused on certification, such as assurance cases
+
+230
+00:21:43,620 --> 00:21:46,800
+Any questions, please get in touch.
+
+231
+00:21:48,120 --> 00:21:49,080
+thank you for your attention
+

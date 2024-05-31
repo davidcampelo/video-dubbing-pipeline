@@ -1,0 +1,344 @@
+1
+00:00:00,900 --> 00:00:06,720
+Hi, welcome to the short training 1.1
+
+2
+00:00:08,340 --> 00:00:13,500
+this video presents the Safety Assurance Information Model
+
+3
+00:00:14,280 --> 00:00:19,980
+we will start by reviewing some general concepts, then we present the information model,
+
+4
+00:00:19,980 --> 00:00:25,020
+and finally we present an illustrative example of the use of the model
+
+5
+00:00:28,320 --> 00:00:33,720
+the first concept is "Safety", which refers to the absence
+
+6
+00:00:33,720 --> 00:00:39,300
+of unacceptable risks in the design and implementation of a critical system
+
+7
+00:00:39,300 --> 00:00:47,520
+"Safety assurance" refers to the systematic and planned actions, activities and processes
+
+8
+00:00:47,520 --> 00:00:52,560
+that are necessary to provide adequate confidence that the product,
+
+9
+00:00:52,560 --> 00:00:57,720
+service or system under development has achieved an acceptable level of safety
+
+10
+00:01:01,020 --> 00:01:05,580
+"Information model" refers to a representation of concepts and
+
+11
+00:01:05,580 --> 00:01:10,620
+relationships, constraints, rules and operations that specify the semantics
+
+12
+00:01:10,620 --> 00:01:15,600
+for a given set of data within an application domain
+
+13
+00:01:17,940 --> 00:01:25,500
+What is the Safety Assurance Information Model (SAIM)? The purpose of this information model
+
+14
+00:01:25,500 --> 00:01:31,200
+is to represent critical system project development information
+
+15
+00:01:33,300 --> 00:01:37,620
+The model focuses on information that is relevant to
+
+16
+00:01:37,620 --> 00:01:41,880
+quality assessment and safety assurance activities, especially
+
+17
+00:01:41,880 --> 00:01:48,540
+Assurance Case development activities. The SAIM model combines three perspectives:
+
+18
+00:01:48,540 --> 00:01:54,900
+i) The model requirements traceability reference model by Ramesh & Jarke
+
+19
+00:01:54,900 --> 00:02:00,660
+ii) the requirements metamodel focused on security requirements by Vilela
+
+20
+00:02:00,660 --> 00:02:07,020
+and iii) the Assurance Cases specification model based on GSN notation
+
+21
+00:02:07,020 --> 00:02:10,800
+We provide links to these works in the video description
+
+22
+00:02:13,080 --> 00:02:16,800
+This is the SAIM metamodel
+
+23
+00:02:20,340 --> 00:02:26,640
+the main concept is "Object". which refer to any type of input or output
+
+24
+00:02:26,640 --> 00:02:32,640
+of the system development process at the level of granularity that the team
+
+25
+00:02:32,640 --> 00:02:39,960
+decided to manage them. "Sources" are any type of
+
+26
+00:02:39,960 --> 00:02:45,480
+external artifact that is linked to "Objects" but which are not managed within the tools
+
+27
+00:02:47,220 --> 00:02:52,800
+the "documents" relationship can link a "Source" to an "Object" that it documents
+
+28
+00:02:55,200 --> 00:03:00,000
+the other types of elements that appear in the
+
+29
+00:03:00,000 --> 00:03:04,560
+SAIM model are recurring concepts in the modeling of safety requirements
+
+30
+00:03:07,680 --> 00:03:14,040
+"Requirements" represent the expected conditions or capabilities that the system must satisfy
+
+31
+00:03:15,540 --> 00:03:22,140
+"Hazards" represent system states that can lead to accidents or cause harm
+
+32
+00:03:25,200 --> 00:03:32,400
+"Safety Requirements" is a subtype of "Requirement" that is related to safety aspects
+
+33
+00:03:34,320 --> 00:03:39,900
+the "mitigates" relationship links the "Safety Requirement" to the "Hazards"
+
+34
+00:03:39,900 --> 00:03:43,680
+they address
+
+35
+00:03:46,200 --> 00:03:50,880
+"Definition Design" is a design decision that
+
+36
+00:03:50,880 --> 00:03:55,080
+specifies or constrains parts of the system or some component
+
+37
+00:03:56,220 --> 00:04:03,000
+the "realizes" relationship links a "Design Definition" to the "Requirements" it realizes
+
+38
+00:04:05,760 --> 00:04:11,280
+"Components" are units of architecture, modules or system code at any
+
+39
+00:04:11,280 --> 00:04:17,700
+level the team has decided to track. There are two relationships linked to "Components"
+
+40
+00:04:17,700 --> 00:04:22,800
+the "allocates" relationship links a "Component" to the "Requirements" that are assigned to it
+
+41
+00:04:24,420 --> 00:04:27,960
+and the "implements" relationship links a
+
+42
+00:04:27,960 --> 00:04:32,220
+"Component" to "Design Definitions" that are implemented by it
+
+43
+00:04:34,920 --> 00:04:40,140
+"Causes" is any "Object" that produces some kind of "Hazard" as its effect
+
+44
+00:04:40,140 --> 00:04:45,840
+e.g., a new "Requirement" or "Design Definition" may cause a
+
+45
+00:04:45,840 --> 00:04:48,720
+"Hazard" so it should be mapped also as a "Cause"
+
+46
+00:04:51,600 --> 00:04:57,420
+the "causes" relationship links any "Object" to "Hazards" that are caused by it
+
+47
+00:04:59,460 --> 00:05:04,200
+"Contexts" are environmental or operational conditions that are relevant to safety
+
+48
+00:05:04,200 --> 00:05:08,220
+"Objects" that contextualizes others are represented
+
+49
+00:05:08,220 --> 00:05:10,020
+by the "contextualizes" relationship
+
+50
+00:05:12,960 --> 00:05:19,740
+"Rationale" is an explanation that provides
+
+51
+00:05:19,740 --> 00:05:24,780
+additional information for some "Object". One of the types is "Justification", that is
+
+52
+00:05:24,780 --> 00:05:29,760
+an explanation about a decision related to requirements, design or hazards
+
+53
+00:05:29,760 --> 00:05:34,980
+"Assumption" is an explanation that assumes a common
+
+54
+00:05:34,980 --> 00:05:37,740
+domain situation held true by stakeholders
+
+55
+00:05:37,740 --> 00:05:44,340
+"Strategy" is an explanation of mitigation approaches or related argumentation
+
+56
+00:05:45,320 --> 00:05:51,960
+"Rationales" can be linked to other "Objects" through the "explains" relationship
+
+57
+00:05:54,540 --> 00:05:58,860
+the SAIM model also includes attributes for the "Objects"
+
+58
+00:05:58,860 --> 00:06:01,800
+these attributes represent data information
+
+59
+00:06:01,800 --> 00:06:05,880
+commonly stored in management tools
+
+60
+00:06:05,880 --> 00:06:12,540
+and are helpful to leverage the analysis of project data 
+
+61
+00:06:12,540 --> 00:06:15,720
+automatically extracted from project management tools
+
+62
+00:06:18,780 --> 00:06:24,000
+we will now present an illustrative example of how the SAIM model can be used to
+
+63
+00:06:24,000 --> 00:06:29,160
+represent data from a critical system project. the example is related to the design of a
+
+64
+00:06:29,160 --> 00:06:34,380
+patient-controlled analgesic infusion pump used within a clinical setting
+
+65
+00:06:35,400 --> 00:06:40,200
+we will discuss the part of the design related to the notification of caregivers
+
+66
+00:06:40,200 --> 00:06:48,180
+that is triggered in the event of detecting of imminent battery exhaustion
+
+67
+00:06:50,580 --> 00:06:58,380
+the diagram in the figure shows the model based in SAIM, which will be discussed step by step now
+
+68
+00:07:00,540 --> 00:07:06,180
+Hazard of battery exhaustion is part of a group of hazards related to under-infusion
+
+69
+00:07:06,180 --> 00:07:13,740
+it occurs when the patient receives less analgesic doses than prescribed
+
+70
+00:07:13,740 --> 00:07:19,260
+in the example, the hazard of under-infusion is represented as the object "H1"
+
+71
+00:07:22,020 --> 00:07:29,280
+the hazard of battery exhaustion is represented as object "H2" that refines the hazard "H1"
+
+72
+00:07:31,320 --> 00:07:33,960
+In order to mitigate the hazard "H2",
+
+73
+00:07:36,120 --> 00:07:41,940
+the safety requirement "R1" concerning notification function for caregivers has been defined,
+
+74
+00:07:44,280 --> 00:07:52,320
+assumption "A1" presents a rationale for requirement "R1", the assumption
+
+75
+00:07:52,320 --> 00:07:57,120
+provides an explanation regarding the advance required in triggering the notification
+
+76
+00:07:58,740 --> 00:08:05,520
+requirement "R1" is allocated in component "Comp3" concerning the notification module
+
+77
+00:08:05,520 --> 00:08:09,480
+all these information items can be modeled using the SAIM
+
+78
+00:08:12,660 --> 00:08:19,260
+Continuing, requirement "R1" is refined into a low-level requirement called "R4"
+
+79
+00:08:19,260 --> 00:08:25,920
+requirement "R4" details how the exhaustion notification will work by specifying
+
+80
+00:08:25,920 --> 00:08:32,760
+the criteria for triggering the notification. Finally requirement "R4" has evidence
+
+81
+00:08:32,760 --> 00:08:39,720
+associated with its implementation and testing. In this case, they are external artifacts mapped as "Sources"
+
+82
+00:08:41,460 --> 00:08:46,800
+we concluded the quick training. the objective was to show how
+
+83
+00:08:46,800 --> 00:08:52,200
+safety information can be managed together with other project information
+
+84
+00:08:52,200 --> 00:08:58,080
+the SAIM model serves as a guide for the organization of project information
+
+85
+00:08:58,080 --> 00:09:03,840
+the model was planned to be lean and be extended according to the particularities of each project
+
+86
+00:09:03,840 --> 00:09:06,060
+Thank you for your attention
+

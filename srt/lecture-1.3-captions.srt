@@ -1,0 +1,376 @@
+1
+00:00:01,440 --> 00:00:06,060
+Hello, welcome this is short training 1.3
+
+2
+00:00:06,060 --> 00:00:10,260
+this video introduces basics about
+
+3
+00:00:10,260 --> 00:00:17,220
+safety assurance cases using GSN notation
+
+4
+00:00:18,060 --> 00:00:22,020
+let's introduce some general concepts about assurance cases,
+
+5
+00:00:22,020 --> 00:00:27,780
+introduce the GSN notation, and show an example of a safety assurance case
+
+6
+00:00:30,300 --> 00:00:35,940
+an Assurance Cas represents a reasoned and compelling argument
+
+7
+00:00:35,940 --> 00:00:39,780
+that a service. system or organization will operate
+
+8
+00:00:39,780 --> 00:00:43,860
+as intended for a given application in a given environment
+
+9
+00:00:43,860 --> 00:00:49,140
+in other words, the assurance case makes a solid argument based on evidence
+
+10
+00:00:49,140 --> 00:00:53,880
+that the system operates and complies with requirements specifications
+
+11
+00:00:55,500 --> 00:01:00,300
+safety assurance cases, in particular, focus on demonstrating
+
+12
+00:01:00,300 --> 00:01:05,400
+that a given system is acceptably safe to operate in a given context
+
+13
+00:01:08,760 --> 00:01:12,600
+arguments are structured as a series of claims,
+
+14
+00:01:12,600 --> 00:01:16,980
+that state an overall claim
+
+15
+00:01:17,880 --> 00:01:22,620
+e.g. in the design of a critical system, the main claim is that the system
+
+16
+00:01:22,620 --> 00:01:24,540
+is acceptably safe to operate
+
+17
+00:01:25,560 --> 00:01:29,460
+the claims are refined into supporting claims,
+
+18
+00:01:29,460 --> 00:01:36,660
+and these supporting claims provide rationales to explain requirements and design decisions
+
+19
+00:01:36,660 --> 00:01:42,000
+examples of claims are requirements, hazards, design definitions,
+
+20
+00:01:42,000 --> 00:01:48,840
+i.e., any aspect of the system design that needs to be adequately satisfied or mitigated
+
+21
+00:01:50,160 --> 00:01:54,120
+at some point in the argumentation, the claims are not further refined,
+
+22
+00:01:54,120 --> 00:01:57,000
+and are then linked to pieces of evidence that support the claims
+
+23
+00:01:57,000 --> 00:02:03,480
+the set of evidence is formed by artifacts produced throughout the development process
+
+24
+00:02:10,440 --> 00:02:14,760
+the GSN (Goal Structuring Notation) is a
+
+25
+00:02:14,760 --> 00:02:19,320
+visual notation for building the arguments of assurance cases
+
+26
+00:02:19,320 --> 00:02:24,900
+by using GSN, it is possible to explicitly document the entire hierarchy of
+
+27
+00:02:24,900 --> 00:02:29,400
+claims and evidence that structure the argument in favor of a system
+
+28
+00:02:29,400 --> 00:02:34,140
+the notation provides a semantics for constructing arguments,
+
+29
+00:02:35,700 --> 00:02:42,120
+claims are called "Goals", supporting arguments can be "Strategies",
+
+30
+00:02:42,120 --> 00:02:46,980
+"Assumption" or "Justifications", and items of evidence are
+
+31
+00:02:46,980 --> 00:02:52,800
+ultimately "Solutions", contextual information is mapped to elements of type "Context"
+
+32
+00:02:54,900 --> 00:02:59,940
+the GSN main elements follow the visual notation depicted on the left
+
+33
+00:03:01,020 --> 00:03:03,960
+in the figure on the right, there is a partial example of a assurance case
+
+34
+00:03:03,960 --> 00:03:10,080
+"Goals" represent something to be achieved, for example a requirement
+
+35
+00:03:10,080 --> 00:03:14,820
+to be satisfactorily implemented, or a hazard to be adequately mitigated
+
+36
+00:03:14,820 --> 00:03:19,140
+the "Goals" comprise the central structure of the argumentation
+
+37
+00:03:20,280 --> 00:03:24,420
+"Strategies" represent explanations that clarify
+
+38
+00:03:24,420 --> 00:03:28,260
+how the high-level goal connects to supporting goals
+
+39
+00:03:28,260 --> 00:03:33,900
+for example in the figure, the strategy for dealing with hazard analysis is
+
+40
+00:03:33,900 --> 00:03:37,440
+to argue separately about product and process aspects
+
+41
+00:03:37,440 --> 00:03:42,900
+throughout the argumentation, it may be necessary to contextualize information,
+
+42
+00:03:42,900 --> 00:03:45,720
+the "Context" element is used to represent this
+
+43
+00:03:45,720 --> 00:03:53,880
+in the example in the figure, a requirements specification is used as "Context"
+
+44
+00:03:55,980 --> 00:04:03,840
+finally, in the bottom of the argument it is expected to have items of evidence, called "Solutions",
+
+45
+00:04:03,840 --> 00:04:10,740
+these solutions point to artifacts generated during the development of the system,
+
+46
+00:04:11,880 --> 00:04:19,260
+if an Goal is not refined into other Goals or linked to Solutions, we say that the
+
+47
+00:04:19,260 --> 00:04:25,620
+Goal is undeveloped, which is expected in the early phases of the project life cycle,
+
+48
+00:04:26,300 --> 00:04:31,380
+the GSN notation also defines two types of elements to
+
+49
+00:04:31,380 --> 00:04:36,900
+represent rationales: the "Justifications" and the "Assumptions"
+
+50
+00:04:36,900 --> 00:04:42,180
+the links allowed between GSN elements
+
+51
+00:04:42,180 --> 00:04:47,100
+are the link "Supported By" and the link "In Context Of"
+
+52
+00:04:47,100 --> 00:04:53,760
+in the previous slide, it is demonstrated the use of the "supported by" link that interconnects goals,
+
+53
+00:04:57,840 --> 00:05:00,840
+whereas the "in context of" link serves to associate
+
+54
+00:05:01,800 --> 00:05:08,760
+the main arguments to contextual or rationale information such as justifications and assumptions
+
+55
+00:05:11,160 --> 00:05:16,260
+let's present an example of a assurance case specified in GSN, which is based
+
+56
+00:05:16,260 --> 00:05:21,360
+in the same design model from the illustrative example of training 1.1
+
+57
+00:05:21,360 --> 00:05:27,480
+the design refers to a patient-controlled analgesic infusion pump, the part
+
+58
+00:05:27,480 --> 00:05:32,580
+of the design that we deal with in this example involves mitigating the hazard of battery exhaustion
+
+59
+00:05:34,320 --> 00:05:40,980
+the figure shows the modeling based on the SAIM model (Safety Assurance Information
+
+60
+00:05:40,980 --> 00:05:44,370
+Model) that we discussed in the previous training 1.1
+
+61
+00:05:44,370 --> 00:05:50,100
+Let's show how this information can be organized into an argument using GSN
+
+62
+00:05:50,100 --> 00:05:56,280
+the arguments are built based on the design information, in this part of the argument
+
+63
+00:05:57,660 --> 00:05:59,940
+the focus is on the hazard of battery exhaustion
+
+64
+00:05:59,940 --> 00:06:06,660
+the mitigation of this hazard is mapped as a high-level goal in the argument
+
+65
+00:06:07,920 --> 00:06:13,560
+note: throughout this example, we are highlighting the SAIM model excerpt on the left
+
+66
+00:06:13,560 --> 00:06:20,100
+and on the right how the element is mapped into the GSN argument
+
+67
+00:06:23,700 --> 00:06:30,120
+the argument then starts with a high-level hazard that was selected: battery exhaustion
+
+68
+00:06:31,500 --> 00:06:37,020
+in order to contextualize the hazard category to which this "battery exhaustion" belongs,
+
+69
+00:06:37,020 --> 00:06:42,420
+we mapped the high-level under-infusion hazard as a "Context" element
+
+70
+00:06:44,040 --> 00:06:45,240
+Continuing in the argument development,
+
+71
+00:06:45,240 --> 00:06:50,940
+the requirement "caregiver notification" mitigates the hazard of battery drain,
+
+72
+00:06:50,940 --> 00:06:54,000
+so the requirement is mapped as a Goal
+
+73
+00:06:54,000 --> 00:07:01,020
+and a "supported by" link is created between hazard and requirement
+
+74
+00:07:02,460 --> 00:07:07,740
+in turn, the assumption "Sufficient time", that provides an explanation for the
+
+75
+00:07:07,740 --> 00:07:15,480
+notification requirement, is mapped as a assumption and connected through the link "In Context Of"
+
+76
+00:07:15,480 --> 00:07:23,400
+the allocation of the requirement is also an important contextual information,
+
+77
+00:07:23,400 --> 00:07:27,780
+so the notification module is mapped as a "Context" element
+
+78
+00:07:29,580 --> 00:07:37,020
+advancing in the decomposition of the system, there is an "exhaustion notification" requirement that refines the
+
+79
+00:07:37,020 --> 00:07:42,840
+"caregiver notification" requirement. It is mapped as a "Goal" and linked by a "Supported By" 
+
+80
+00:07:44,100 --> 00:07:53,640
+finally, the two sources that document the "exhaustion notification" requirement are
+
+81
+00:07:53,640 --> 00:07:59,100
+mapped as "Solutions", thus representing supporting evidence to the argument
+
+82
+00:07:59,100 --> 00:08:04,260
+it is important to emphasize that this is one of the valid alternatives for mapping
+
+83
+00:08:04,260 --> 00:08:08,760
+the design of this project to an argument in GSN, but it is not the only one
+
+84
+00:08:08,760 --> 00:08:12,540
+the mitigation of the hazard can be argued from
+
+85
+00:08:12,540 --> 00:08:16,380
+other perspectives, since there are a variety of argumentation patterns
+
+86
+00:08:19,140 --> 00:08:22,860
+what it is important to grasp is that, whatever the pattern of argumentation,
+
+87
+00:08:22,860 --> 00:08:28,860
+the information used is the same and originates in the project development artifacts
+
+88
+00:08:28,860 --> 00:08:35,220
+we completed this short training aimed to leverage some concepts about assurance cases
+
+89
+00:08:35,220 --> 00:08:39,900
+they are built based on project information, also requiring
+
+90
+00:08:39,900 --> 00:08:44,820
+information on rationales and safety assurance
+
+91
+00:08:44,820 --> 00:08:47,940
+there is no direct mapping of
+
+92
+00:08:47,940 --> 00:08:52,740
+project data to GSN elements, as the same project items can be mapped
+
+93
+00:08:52,740 --> 00:08:58,800
+differently depending on the argumentation pattern adopted
+
+94
+00:08:58,800 --> 00:09:00,660
+Thank you for your attention
+
