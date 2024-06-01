@@ -39,11 +39,11 @@ The model focuses on information that is relevant to quality assessment and safe
 2) the requirements metamodel focused on security requirements by Vilela
 
 11
-00:02:00,660 --> 00:02:07,020
+00:02:00,660 --> 00:02:08,020
 and 3) the Assurance Cases specification model based on GSN notation
 
 12
-00:02:07,020 --> 00:02:10,800
+00:02:08,020 --> 00:02:11,800
 We provide links to these works in the video description
 
 13
