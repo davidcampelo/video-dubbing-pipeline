@@ -87,27 +87,27 @@ the "realizes" relationship links a "Design Definition" to the "Requirements" it
 the "allocates" relationship links a "Component" to the "Requirements" that are assigned to it
 
 23
-00:04:24,420 --> 00:04:32,220
-and the "implements" relationship links a "Component" to "Design Definitions" that are implemented by it 
+00:04:23,420 --> 00:04:32,220
+and the "implements" relationship links a "Component" to "Design Definitions" that are implemented by it.
 
 24
 00:04:34,920 --> 00:04:40,140
 "Causes" is any "Object" that produces some kind of "Hazard" as its effect
 
 25
-00:04:40,140 --> 00:04:48,720
-e.g., a new "Requirement" or "Design Definition" may cause a "Hazard" so it should be mapped also as a "Cause"
+00:04:40,140 --> 00:04:49,720
+For example, a new "Requirement" or "Design Definition" may cause a "Hazard" so it should be mapped also as a "Cause"
 
 26
 00:04:51,600 --> 00:04:57,420
-the "causes" relationship links any "Object" to "Hazards" that are caused by it
+the "causes" relationship links any "Object" to "Hazards" that are caused by it.
 
 27
 00:04:59,460 --> 00:05:04,200
 "Contexts" are environmental or operational conditions that are relevant to safety
 
 28
-00:05:04,200 --> 00:05:10,020
+00:05:05,200 --> 00:05:10,020
 "Objects" that contextualizes others are represented by the "contextualizes" relationship
 
 29
@@ -148,19 +148,19 @@ the diagram in the figure shows the model based in SAIM, which will be discussed
 
 38
 00:07:00,540 --> 00:07:06,180
-Hazard of battery exhaustion is part of a group of hazards related to under-infusion
+Hazard of battery exhaustion is part of a group of hazards related to under-infusion.
 
 39
 00:07:06,180 --> 00:07:13,740
-it occurs when the patient receives less analgesic doses than prescribed
+it occurs when the patient receives less analgesic doses than prescribed.
 
 40
 00:07:13,740 --> 00:07:19,260
-in the example, the hazard of under-infusion is represented as the object "H1"
+in the example, the hazard of under-infusion is represented as the object "H1".
 
 41
 00:07:22,020 --> 00:07:29,280
-the hazard of battery exhaustion is represented as object "H2" that refines the hazard "H1"
+the hazard of battery exhaustion is represented as object "H2" that refines the hazard "H1".
 
 42
 00:07:31,320 --> 00:07:41,940
