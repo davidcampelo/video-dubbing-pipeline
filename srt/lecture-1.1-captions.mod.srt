@@ -132,23 +132,23 @@ it occurs when the patient receives less analgesic doses than prescribed.
 
 40
 00:07:13,740 --> 00:07:19,260
-in the example, the hazard of under-infusion is represented as the object "H1".
+in the example, the hazard of under-infusion is represented as the object H 1.
 
 41
 00:07:22,020 --> 00:07:29,280
-the hazard of battery exhaustion is represented as object "H2" that refines the hazard "H1".
+the hazard of battery exhaustion is represented as object H 2 that refines the hazard H 1.
 
 42
 00:07:31,320 --> 00:07:41,940
-In order to mitigate the hazard "H2", the safety requirement "R1" concerning notification function for caregivers has been defined,
+In order to mitigate the hazard H 2, the safety requirement R 1 concerning notification function for caregivers has been defined,
 
 43
 00:07:44,280 --> 00:07:57,120
-assumption "A1" presents a rationale for requirement "R1", the assumption provides an explanation regarding the advance required in triggering the notification
+assumption A 1 presents a rationale for requirement R 1, the assumption provides an explanation regarding the advance required in triggering the notification
 
 44
 00:07:58,740 --> 00:08:05,520
-requirement "R1" is allocated in component "Comp3" concerning the notification module
+requirement R 1 is allocated in component "Comp3" concerning the notification module
 
 45
 00:08:05,520 --> 00:08:09,480
@@ -156,15 +156,15 @@ all these information items can be modeled using the Model
 
 46
 00:08:12,660 --> 00:08:19,260
-So, requirement "R1" is refined into a low-level requirement called "R4"
+So, requirement R 1 is refined into a low-level requirement called R 4
 
 47
 00:08:19,260 --> 00:08:29,340
-requirement "R4" details how the exhaustion notification will work by specifying the criteria for triggering the notification. 
+requirement R 4 details how the exhaustion notification will work by specifying the criteria for triggering the notification. 
 
 48
 00:08:29,340 --> 00:08:39,720
-Finally requirement "R4" has evidence associated with its implementation and testing. In this case, they are external artifacts mapped as "Sources"
+Finally requirement R 4 has evidence associated with its implementation and testing. In this case, they are external artifacts mapped as "Sources"
 
 49
 00:08:41,460 --> 00:08:52,200
