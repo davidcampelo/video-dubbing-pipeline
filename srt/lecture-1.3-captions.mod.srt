@@ -92,208 +92,124 @@ throughout the argumentation, it may be necessary to contextualize information, 
 
 24
 00:03:45,720 --> 00:03:53,880
-in the example in the figure, a requirements specification is used as "Context"
+in the example of the image, a requirements specification is used as "Context".
 
 25
 00:03:55,980 --> 00:04:03,840
-finally, in the bottom of the argument it is expected to have items of evidence, called "Solutions",
+finally, in the bottom of the argument it is expected to have items of evidence, called "Solutions".
 
 26
 00:04:03,840 --> 00:04:10,740
-these solutions point to artifacts generated during the development of the system,
+these solutions point to artifacts generated during the development of the system.
 
 27
-00:04:11,880 --> 00:04:19,260
-if an Goal is not refined into other Goals or linked to Solutions, we say that the
+00:04:11,880 --> 00:04:25,620
+if an Goal is not refined into other Goals or linked to Solutions, we say that the Goal is undeveloped, which is expected in the early phases of the project life cycle.
 
 28
-00:04:19,260 --> 00:04:25,620
-Goal is undeveloped, which is expected in the early phases of the project life cycle,
+00:04:26,300 --> 00:04:36,900
+the GSN notation also defines two types of elements to represent rationales: the "Justifications" and the "Assumptions". 
 
 29
-00:04:26,300 --> 00:04:31,380
-the GSN notation also defines two types of elements to
+00:04:36,900 --> 00:04:47,100
+the links allowed between GSN elements are the link "Supported By" and the link "In Context Of".
 
 30
-00:04:31,380 --> 00:04:36,900
-represent rationales: the "Justifications" and the "Assumptions"
+00:04:47,100 --> 00:04:53,760
+in the previous slide, it is demonstrated the use of the "supported by" link that interconnects goals.
 
 31
-00:04:36,900 --> 00:04:42,180
-the links allowed between GSN elements
+00:04:57,840 --> 00:05:08,760
+The "in context of" link serves to associate the main arguments to contextual or rationale information such as justifications and assumptions.
 
 32
-00:04:42,180 --> 00:04:47,100
-are the link "Supported By" and the link "In Context Of"
+00:05:11,160 --> 00:05:21,360
+let's present an example of a assurance case specified in GSN, which is based in the same design model from the illustrative example of training 1.1.
 
 33
-00:04:47,100 --> 00:04:53,760
-in the previous slide, it is demonstrated the use of the "supported by" link that interconnects goals,
+00:05:21,360 --> 00:05:32,580
+the design refers to a patient-controlled analgesic infusion pump, the part of the design that we deal with in this example involves mitigating the hazard of battery exhaustion.
 
 34
-00:04:57,840 --> 00:05:00,840
-whereas the "in context of" link serves to associate
+00:05:34,320 --> 00:05:44,370
+the figure shows the modeling based on the Safety Assurance Information Model presented on training 1.1.
 
 35
-00:05:01,800 --> 00:05:08,760
-the main arguments to contextual or rationale information such as justifications and assumptions
+00:05:44,370 --> 00:05:50,100
+Let's show how this information can be organized into an argument using GSN.
 
 36
-00:05:11,160 --> 00:05:16,260
-let's present an example of a assurance case specified in GSN, which is based
+00:05:50,100 --> 00:05:59,940
+the arguments are built based on the design information, in this part of the argument the focus is on the hazard of battery exhaustion.
 
 37
-00:05:16,260 --> 00:05:21,360
-in the same design model from the illustrative example of training 1.1
+00:05:59,940 --> 00:06:06,660
+the mitigation of this hazard is mapped as a high-level goal in the argument.
 
 38
-00:05:21,360 --> 00:05:27,480
-the design refers to a patient-controlled analgesic infusion pump, the part
+00:06:07,920 --> 00:06:20,100
+Throughout this example, we are highlighting the referred part of the model on the left and on the right how the element is mapped into the GSN argument.
 
 39
-00:05:27,480 --> 00:05:32,580
-of the design that we deal with in this example involves mitigating the hazard of battery exhaustion
+00:06:23,700 --> 00:06:30,120
+the argument then starts with a high-level hazard that was selected: battery exhaustion.
 
 40
-00:05:34,320 --> 00:05:40,980
-the figure shows the modeling based on the SAIM model (Safety Assurance Information
+00:06:31,500 --> 00:06:42,420
+in order to contextualize the hazard category to which this "battery exhaustion" belongs, we mapped the high-level under-infusion hazard as a "Context" element.
 
 41
-00:05:40,980 --> 00:05:44,370
-Model) that we discussed in the previous training 1.1
+00:06:44,040 --> 00:06:50,940
+Continuing in the argument development, the requirement "caregiver notification" mitigates the hazard of battery drain.
 
 42
-00:05:44,370 --> 00:05:50,100
-Let's show how this information can be organized into an argument using GSN
+00:06:50,940 --> 00:07:01,020
+Hence, the requirement is mapped as a Goal and a "supported by" link is created between hazard and requirement.
 
 43
-00:05:50,100 --> 00:05:56,280
-the arguments are built based on the design information, in this part of the argument
+00:07:02,500 --> 00:07:15,480
+in turn, the assumption "Sufficient time", that provides an explanation for the notification requirement, is mapped as an Assumption and connected through the link "In Context Of".
 
 44
-00:05:57,660 --> 00:05:59,940
-the focus is on the hazard of battery exhaustion
+00:07:15,480 --> 00:07:23,400
+the allocation of the requirement is also an important contextual information.
 
 45
-00:05:59,940 --> 00:06:06,660
-the mitigation of this hazard is mapped as a high-level goal in the argument
+00:07:23,400 --> 00:07:27,780
+so the notification module is mapped as a "Context" element.
 
 46
-00:06:07,920 --> 00:06:13,560
-note: throughout this example, we are highlighting the SAIM model excerpt on the left
+00:07:29,580 --> 00:07:42,840
+there is also an "exhaustion notification" requirement that refines the "caregiver notification" requirement, which is mapped as a "Goal" and linked by a "Supported By".
 
 47
-00:06:13,560 --> 00:06:20,100
-and on the right how the element is mapped into the GSN argument
+00:07:44,100 --> 00:07:59,100
+and finally, the two sources that document the "exhaustion notification" requirement are mapped as "Solutions", thus representing supporting evidence to the argument.
 
 48
-00:06:23,700 --> 00:06:30,120
-the argument then starts with a high-level hazard that was selected: battery exhaustion
+00:07:59,100 --> 00:08:08,760
+it is important to emphasize that this is one of the valid alternatives for mapping the design of this project to an argument in GSN, but it is not the only one.
 
 49
-00:06:31,500 --> 00:06:37,020
-in order to contextualize the hazard category to which this "battery exhaustion" belongs,
+00:08:08,760 --> 00:08:16,380
+the mitigation of the hazard can be argued from other perspectives, since there are a variety of argumentation patterns.
 
 50
-00:06:37,020 --> 00:06:42,420
-we mapped the high-level under-infusion hazard as a "Context" element
+00:08:19,140 --> 00:08:28,860
+All in all, whatever the pattern of argumentation is, the information used is the same and is originated in the project development artifacts.
 
 51
-00:06:44,040 --> 00:06:45,240
-Continuing in the argument development,
+00:08:28,860 --> 00:08:35,220
+we completed this short training aimed to leverage some concepts about assurance cases.
 
 52
-00:06:45,240 --> 00:06:50,940
-the requirement "caregiver notification" mitigates the hazard of battery drain,
+00:08:35,220 --> 00:08:44,820
+they are built based on project information, also requiring information on rationales and safety assurance.
 
 53
-00:06:50,940 --> 00:06:54,000
-so the requirement is mapped as a Goal
+00:08:44,820 --> 00:08:58,800
+there is no direct mapping of project data to GSN elements, as the same project items can be mapped differently depending on the argumentation pattern adopted.
 
 54
-00:06:54,000 --> 00:07:01,020
-and a "supported by" link is created between hazard and requirement
-
-55
-00:07:02,460 --> 00:07:07,740
-in turn, the assumption "Sufficient time", that provides an explanation for the
-
-56
-00:07:07,740 --> 00:07:15,480
-notification requirement, is mapped as a assumption and connected through the link "In Context Of"
-
-57
-00:07:15,480 --> 00:07:23,400
-the allocation of the requirement is also an important contextual information,
-
-58
-00:07:23,400 --> 00:07:27,780
-so the notification module is mapped as a "Context" element
-
-59
-00:07:29,580 --> 00:07:37,020
-advancing in the decomposition of the system, there is an "exhaustion notification" requirement that refines the
-
-60
-00:07:37,020 --> 00:07:42,840
-"caregiver notification" requirement. It is mapped as a "Goal" and linked by a "Supported By" 
-
-61
-00:07:44,100 --> 00:07:53,640
-finally, the two sources that document the "exhaustion notification" requirement are
-
-62
-00:07:53,640 --> 00:07:59,100
-mapped as "Solutions", thus representing supporting evidence to the argument
-
-63
-00:07:59,100 --> 00:08:04,260
-it is important to emphasize that this is one of the valid alternatives for mapping
-
-64
-00:08:04,260 --> 00:08:08,760
-the design of this project to an argument in GSN, but it is not the only one
-
-65
-00:08:08,760 --> 00:08:12,540
-the mitigation of the hazard can be argued from
-
-66
-00:08:12,540 --> 00:08:16,380
-other perspectives, since there are a variety of argumentation patterns
-
-67
-00:08:19,140 --> 00:08:22,860
-what it is important to grasp is that, whatever the pattern of argumentation,
-
-68
-00:08:22,860 --> 00:08:28,860
-the information used is the same and originates in the project development artifacts
-
-69
-00:08:28,860 --> 00:08:35,220
-we completed this short training aimed to leverage some concepts about assurance cases
-
-70
-00:08:35,220 --> 00:08:39,900
-they are built based on project information, also requiring
-
-71
-00:08:39,900 --> 00:08:44,820
-information on rationales and safety assurance
-
-72
-00:08:44,820 --> 00:08:47,940
-there is no direct mapping of
-
-73
-00:08:47,940 --> 00:08:52,740
-project data to GSN elements, as the same project items can be mapped
-
-74
-00:08:52,740 --> 00:08:58,800
-differently depending on the argumentation pattern adopted
-
-75
 00:08:58,800 --> 00:09:00,660
-Thank you for your attention
+Thanks for your attention and participation!
