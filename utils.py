@@ -117,7 +117,7 @@ def create_tts_audio(input_subtitle_path, output_audio_path):
     models = SubToAudio().coqui_model()
     sub = SubToAudio(model_name=models[0], progress_bar=True)
     subtitle = sub.subtitle(input_subtitle_path)
-    print(" Subtitle has ["+str(len(subtitle))+"] lines...")
+    print_in_green(" Subtitle has ["+str(len(subtitle))+"] lines...")
     sub.convert_to_audio(sub_data=subtitle, speaker=_speaker, output_path=output_audio_path)
     check_if_file_created(output_audio_path)
 
