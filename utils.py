@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 import argparse
 from subtoaudiomod import SubToAudio
+from moviepy.editor import VideoFileClip
 
 TEMP_VIDEOCHUNK_PATH = "/tmp/out"
 
@@ -132,6 +133,13 @@ def merge_ttsaudio_with_original_video(input_video_path, output_audio_path, outp
     check_if_file_created(output_video_path_merged)
 
 
+def get_video_duration(video_path):
+    video = VideoFileClip(video_path)
+    duration = video.duration
+    video.close()
+    return duration
+
+
 def extract_silence_intervals(output_video_path_merged, min_silence_duration, silence_threshold):
     # Extract silence timestamps
     ffmpeg_command = [
@@ -160,20 +168,29 @@ def extract_non_silence_intervals(output_video_path_merged, min_silence_duration
     for silence_start, silence_end in silence_intervals:
         non_silence_intervals.append((start_time, silence_start))
         start_time = silence_end
+    non_silence_intervals.append((start_time, get_video_duration(output_video_path_merged)))
 
     return non_silence_intervals
 
 
 def create_video_chunks(video_path, non_silence_intervals, new_silence_added_duration):
+    # Get video duration to check for end time overflow
+    video_duration = max(non_silence_intervals, key=lambda interval: interval[1])[1]
     for i, (start_time, end_time) in enumerate(non_silence_intervals):
+        # Check for end time overflow
+        if (video_duration < end_time + new_silence_added_duration):
+            end_time = video_duration
+        else:
+            end_time = end_time + new_silence_added_duration
+        # Build ffmpeg command for each chunk
         chunk_base_path = f'{TEMP_VIDEOCHUNK_PATH}{i:03}'
         ffmpeg_command = [
-        'ffmpeg', '-i', video_path, '-ss', str(start_time), '-to', str(end_time + new_silence_added_duration), '-c', 'copy', chunk_base_path +'.mp4'
+        'ffmpeg', '-i', video_path, '-ss', str(start_time), '-to', str(end_time), '-c', 'copy', chunk_base_path +'.mp4'
         ]
         print_in_green("# Running command: "+ ' '.join(ffmpeg_command))
         result = subprocess.run(ffmpeg_command, stderr=subprocess.PIPE, text=True)
         check_if_file_created(chunk_base_path+'.mp4')
-
+        # Convert each chunk to .ts format
         ffmpeg_command = [
         'ffmpeg', '-i', f'{TEMP_VIDEOCHUNK_PATH}{i:03}.mp4', '-c', 'copy', '-bsf:v', 'h264_mp4toannexb', '-f', 'mpegts', chunk_base_path+'.ts'
         ]
