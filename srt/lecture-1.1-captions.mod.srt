@@ -31,15 +31,15 @@ What is the Safety Assurance Information Model? The purpose of this information 
 The model focuses on information that is relevant to quality assessment and safety assurance activities, especially Assurance Case development activities. The model combines three perspectives:
 
 9
-00:01:48,540 --> 00:01:54,900
+00:01:48,540 --> 00:01:55,400
 1) The model requirements traceability reference model by Ramesh & Jarke,
 
 10
-00:01:54,900 --> 00:02:00,660
+00:01:55,400 --> 00:02:01,000
 2) the requirements metamodel focused on security requirements by Vilela,
 
 11
-00:02:00,660 --> 00:02:08,020
+00:02:01,000 --> 00:02:08,020
 and 3) the Assurance Cases specification model based on GSN notation.
 
 12
@@ -47,7 +47,7 @@ and 3) the Assurance Cases specification model based on GSN notation.
 We provide links to these works in the video description.
 
 13
-00:02:13,080 --> 00:02:16,800
+00:02:13,080 --> 00:02:16,000
 This is the metamodel.
 
 14
@@ -72,7 +72,7 @@ the "documents" relationship can link a "Source" to an "Object" that it document
 
 19
 00:03:46,200 --> 00:03:55,080
-"Definition Design" is a design decision that specifies or constrains parts of the system or some component.
+"Design Definition" is a design decision that specifies or constrains parts of the system or some component.
 
 20
 00:03:56,220 --> 00:04:03,000
