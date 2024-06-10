@@ -27,11 +27,11 @@ safety assurance cases, in particular, focus on demonstrating that a given syste
 arguments are structured as a series of claims that state an overall claim.
 
 8
-00:01:17,880 --> 00:01:24,540
+00:01:17,880 --> 00:01:25,540
 for example, in the design of a critical system the main claim is that the system is acceptably safe to operate.
 
 9
-00:01:25,560 --> 00:01:36,660
+00:01:26,000 --> 00:01:36,660
 the claims are refined into supporting claims, and these supporting claims provide rationales to explain requirements and design decisions.
 
 10
@@ -56,7 +56,7 @@ By using GSN, it is possible to explicitly document the entire hierarchy of clai
 
 15
 00:02:29,400 --> 00:02:34,140
-the notation provides a semantics for constructing arguments.
+the notation provides richer semantics for constructing arguments.
 
 16
 00:02:35,700 --> 00:02:52,800
@@ -67,12 +67,12 @@ Claims are called "Goals", supporting arguments can be "Strategies", "Assumption
 the G.S.N. main elements follow the visual notation depicted on the left.
 
 18
-00:03:01,020 --> 00:03:03,960
-in the figure on the right, there is a partial example of an assurance case.
+00:03:01,020 --> 00:03:04,900
+on the right, there's a partial example of an assurance case.
 
 19
-00:03:03,960 --> 00:03:14,820
-"Goals" represent something to be achieved, for example a requirement to be implemented, or a hazard to be adequately mitigated
+00:03:04,900 --> 00:03:14,820
+"Goals" represent something to be achieved, for example a requirement to be implemented, or a hazard to be mitigated
 
 20
 00:03:14,820 --> 00:03:19,140
@@ -124,7 +124,7 @@ The "in context of" link serves to associate the main arguments to contextual or
 
 32
 00:05:11,160 --> 00:05:21,360
-let's present an example of a assurance case specified in GSN, which is based in the same design model from the illustrative example of training 1.1.
+let's present an example of a assurance case specified in GSN based in the same design model from the example of training 1.1.
 
 33
 00:05:21,360 --> 00:05:32,580
@@ -200,11 +200,11 @@ All in all, whatever the pattern of argumentation is, the information used is th
 
 51
 00:08:28,860 --> 00:08:35,220
-we completed this short training aimed to leverage some concepts about assurance cases.
+we completed this short training on some concepts about assurance cases.
 
 52
 00:08:35,220 --> 00:08:44,820
-they are built based on project information, also requiring information on rationales and safety assurance.
+Assurance cases are built based on project information, also requiring information on rationales and safety assurance.
 
 53
 00:08:44,820 --> 00:08:58,800

@@ -11,217 +11,213 @@ this video provides an overview of issue tracking systems and how these systems 
 we introduce some general concepts, describe basic usage and show how these tools serve you to search and filter information related to project management.
 
 4
-00:00:30,540 --> 00:00:36,840
-an I.S.T. is a software system for managing the lifecycle of a set of issues.
+00:00:31,540 --> 00:00:42,780
+An Issue Tracking System is a software for managing the lifecycle of a set of work-items, which can represent a lot of different information related to a software project.
 
 5
-00:00:36,840 --> 00:00:42,780
-issues can represent a lot of different information related to a software project.
+00:00:42,780 --> 00:00:50,760
+Such systems are widely adopted as a collaborative project management tool, and they can record different kinds of information,
 
 6
-00:00:42,780 --> 00:00:50,760
-these systems are widely adopted as a collaborative project management tool, and they can record different kinds of information,
+00:00:50,760 --> 00:00:55,740
+This system can also be used as a repository of project's knowledge.
 
 7
-00:00:50,760 --> 00:00:55,740
-an I.S.T. can also be used as a repository of project's knowledge.
+00:00:56,660 --> 00:01:04,440
+They are belong to the Application Life-cycle Management tools, which are used to manage the entire life-cycle of a product.
 
 8
-00:00:56,660 --> 00:01:04,440
-Issue tracking normally are part of Application Life-cyle Management tools, which are used to manage the entire life-cycle of a product.
+00:01:05,440 --> 00:01:11,820
+In many cases, teams and organizations may use only this system as the management tool.
 
 9
-00:01:05,440 --> 00:01:11,820
-in many cases, teams and organizations may use only this system as the management tool.
-
-10
-00:01:12,820 --> 00:01:20,700
+00:01:13,820 --> 00:01:20,700
 Issue is the unit of work registered for management purposes.
 
-11
+10
 00:01:21,700 --> 00:01:27,780
 In the remainder of this video, we will use the term "item" to refer to an "issue".
 
-12
+11
 00:01:30,060 --> 00:01:38,820
 Issues can represent a variety of information that a team decides to track: bugs, change requests, tasks, etc.
 
-13
+12
 00:01:39,960 --> 00:01:51,300
 the Atlassian Jira tool has predefined types of issues that cover the basic needs of a software development project.
 
-14
+13
 00:01:54,300 --> 00:02:01,020
 an issue link is a bi-directional association that creates an relationship between two issues.
 
-15
+14
 00:02:01,020 --> 00:02:13,680
 the Atlassian Jira tool has pre-defined link types focused on basic issue management and it provides a type of link without semantics for free use ("relates to").
 
-16
+15
 00:02:15,840 --> 00:02:22,920
 in the image, we see an example of an issue within the Jira tool.
 
-17
+16
 00:02:22,920 --> 00:02:27,480
 the data fields are common and found in other tracking tools.
 
-18
+17
 00:02:27,480 --> 00:02:34,020
 for example, each issue has a unique id that does not change throughout the lifecycle.
 
-19
+18
 00:02:34,020 --> 00:02:42,960
 in addition to pre-defined (built-in) issue types, issue link types and fields, some tools allow you to create custom elements.
 
-20
+19
 00:02:42,960 --> 00:02:54,900
 for example, the "Description" field is pre-defined in Jira, while the "Justification" is a custom field based on the model discussed in the previous training
 
-21
+20
 00:02:55,800 --> 00:03:03,240
 the use of these custom fields allows you to associate more precise semantics to the data filled in the issue.
 
-22
+21
 00:03:03,240 --> 00:03:13,080
 another example is the type of issue "Story", which is already pre-defined in Jira and can be used to represent "Requirements".
 
-23
+22
 00:03:13,080 --> 00:03:29,400
 however, the representation of "Hazards" of the model doesn't fit properly with any of the pre-defined types, so we set up an issue type called "Hazard" for a more accurate representation.
 
-24
+23
 00:03:30,600 --> 00:03:38,340
 and finally, in a similar way, we created the custom issue link types to represent the model relationships.
 
-25
+24
 00:03:38,340 --> 00:03:44,940
 in the figure, the issue "GPCA-10" is a "Requirement" that has a mitigation link with two "Hazards".
 
-26
+25
 00:03:47,280 --> 00:03:58,020
 these tools also bring a series of features for searching and filtering information, including the creation of queries or advanced filters (we will see an example later in this video).
 
-27
+26
 00:03:59,220 --> 00:04:16,080
 we customize an instance of Jira to incorporate the semantics of the model, four specific types of issues were created while we reused others, such as the issue type "Story" that we use to represent the requirements,
 
-28
+27
 00:04:16,080 --> 00:04:31,620
 we also customized fields to represent the "Assumptions" and "Justifications" associated with issues and, finally, we customized specific issue link types for the semantics of the  model, as shown in the table.
 
-29
+28
 00:04:33,720 --> 00:04:38,160
 let's now make a quick presentation of the customized Jira tool.
 
-30
+29
 00:04:40,740 --> 00:04:45,720
 This is the home page of Jira, displaying the issues of a project.
 
-31
+30
 00:04:47,100 --> 00:04:57,000
 the project is named Open PCA it is related to the example we discussed in previous training.
 
-32
+31
 00:04:58,260 --> 00:05:05,760
 Each project in Jira has some different views/perspectives over the set of issues.
 
-33
+32
 00:05:05,760 --> 00:05:24,270
 this one is the backlog view, that lists all the issues that are open, and there is a view where I can see all the issues together: the "All Issues" view.
 
-34
+33
 00:05:24,270 --> 00:05:41,520
 There are a series of filtering and data organization options, for example, I can sort by unique identifier, sort by summary, sort by labels.
 
-35
+34
 00:05:41,520 --> 00:05:55,080
 In this example shown, the "Stories" are mapped as "Requirements" and the stories that have the label "safety" are mapped as "Safety Requirements".
 
-36
+35
 00:05:55,080 --> 00:05:59,520
 we can also have a view sorted by Components.
 
-37
+36
 00:06:06,840 --> 00:06:22,080
 we can also have a view sorted by issue types, for example, the "Context" issues appear first, then "Design Definition", "Hazards", and "Stories".
 
-38
+37
 00:06:23,820 --> 00:06:30,180
 Let's open one of these stories.
 
-39
+38
 00:06:31,440 --> 00:06:58,620
 This is the display of a Story, it contains a description. This requirement has no rationale associated with it, but is related to other issues by the "is refined by" relationship, which means that issues 12, 11, and 55 are refinements of issue 8.
 
-40
+39
 00:07:05,340 --> 00:07:10,440
 Apart from browsing through the issues, I may search for specific information using text search.
 
-41
+40
 00:07:14,940 --> 00:07:19,500
 For example, any issue containing "minimum" intervals:
 
-42
+41
 00:07:19,500 --> 00:07:44,220
 I found the story 24, which represents the minimum time between doses of analgesics requested by patients, the issue has a description and there is a justification associated which explains why this requirement is important for the design of the system.
 
-43
+42
 00:07:45,480 --> 00:08:05,640
 and for each issue there are the related links, this requirement 24 mitigates the Hazard 31 and refines the requirement 22, which is a high-level requirement.
 
-44
+43
 00:08:07,200 --> 00:08:26,580
 let's open Hazard 31. We see the description of the Hazard, here we see information on which are the requirements in the system design that can cause this Harzard.
 
-45
+44
 00:08:28,320 --> 00:08:35,340
 as we showed before, the requirement 24 is mitigating this hazard.
 
-46
+45
 00:08:35,340 --> 00:08:42,780
 Also, there is the pre-defined "relates to" relationship, that we re-use to associate "Contexts" to other issues.
 
-47
+46
 00:08:43,200 --> 00:08:59,580
 this relationship has no semantics in Jira, so it was given a semantics to be the "contextualizes" relationship, so we skip the creation of a new custom relationship.
 
-48
+47
 00:09:00,960 --> 00:09:22,200
 This is a "Context" issue, we have an attachment that is a Hazard Analysis associated with the design, and there is another attachment that is a "Source" that documents this "Context".
 
-49
+48
 00:09:23,280 --> 00:09:30,480
 this "Context" is related to a series of "Hazards", as a result of the hazard analysis that was carried out.
 
-50
+49
 00:09:32,280 --> 00:09:39,780
 so these are the basic features that every good Issue Tracking System brings for users.
 
-51
+50
 00:09:39,780 --> 00:09:53,340
 In order to browse this repository of knowledge, the collection of issues that are registered in the system you can also apply some filters.
 
-52
+51
 00:09:55,440 --> 00:10:04,500
 For example, to filter the issue list by Hazards you already have a filter which lists only the issues that are of the Hazards type.
 
-53
+52
 00:10:11,400 --> 00:10:23,760
 To filter all the Design Definition issues, there is also a filter.
 
-54
+53
 00:10:31,800 --> 00:10:39,960
 and also there is a series of other fields that can be used as filter criteria.
 
-55
+54
 00:10:44,220 --> 00:11:00,120
 this was the walkthrough in a Jira tool and how it can support the management of assurance information in an integrated way with the other project information.
 
-56
+55
 00:11:01,980 --> 00:11:26,040
 Issue Tracking Systems have features that support their use as a knowledge repository, such as search and filtering, data exporting, and customization, which allows users to manage information with richer semantics.
 
-57
+56
 00:11:27,040 --> 00:11:30,000
 Thanks for your attention and participation!
